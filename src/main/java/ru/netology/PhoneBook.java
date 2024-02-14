@@ -28,4 +28,8 @@ public class PhoneBook {
         return "Абонент с номером " + phoneNumber + " не существует.\n";
     }
 
+    public long findByName(String name) {
+
+        return 0;
+    }
 }

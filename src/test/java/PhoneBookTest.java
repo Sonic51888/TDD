@@ -5,10 +5,12 @@ import ru.netology.PhoneBook;
 
 public class PhoneBookTest {
     static PhoneBook phoneBook = new PhoneBook();
-@BeforeAll
-public static void beforeAll(){
-    Assertions.assertEquals(1,phoneBook.add("Алексей", 200L));
-}
+
+    @BeforeAll
+    public static void beforeAll() {
+        Assertions.assertEquals(1, phoneBook.add("Алексей", 200L));
+    }
+
     @Test
     public void addTest() {
         Assertions.assertEquals(2, phoneBook.add("Саша", 80_000_000_000L));
@@ -21,4 +23,11 @@ public static void beforeAll(){
         Assertions.assertTrue("Алексей".equals(phoneBook.findByNumber(200L)));
         Assertions.assertFalse("Михаил".equals(phoneBook.findByNumber(300L)));
     }
+
+    @Test
+    public void findByNameTest() {
+        Assertions.assertTrue(200L == phoneBook.findByName("Алексей"));
+        Assertions.assertFalse(300L == phoneBook.findByName("Михаил"));
+    }
 }
+
