@@ -29,5 +29,9 @@ public class PhoneBookTest {
         Assertions.assertTrue(200L == phoneBook.findByName("Алексей"));
         Assertions.assertFalse(300L == phoneBook.findByName("Михаил"));
     }
+    @Test
+    public void printAllNamesTest(){
+        phoneBook.printAllNames().stream().forEach(System.out::println);
+    }
 }
 

@@ -40,4 +40,7 @@ public class PhoneBook {
         System.out.println("Абонент с номером " + name + " не существует.\n");
         return Long.MIN_VALUE;
     }
+    public Set <PhoneBookList> printAllNames(){
+        return null;
+    }
 }
