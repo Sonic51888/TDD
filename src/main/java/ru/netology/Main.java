@@ -10,6 +10,6 @@ public class Main {
         System.out.println(phoneBook.findByNumber(8000l));
         System.out.println(phoneBook.findByNumber(200l));
         phoneBook.findByName("Олег");
-
+        System.out.println(phoneBook.printAllNames());
     }
 }

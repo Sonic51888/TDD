@@ -37,6 +37,6 @@ public class PhoneBookList {
         return "PhoneBookList{" +
                 "name='" + name + '\'' +
                 ", phoneNumber=" + phoneNumber +
-                '}';
+                "}";
     }
 }

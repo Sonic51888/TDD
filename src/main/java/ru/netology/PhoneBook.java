@@ -37,10 +37,10 @@ public class PhoneBook {
                 return phoneBookList.getPhoneNumber();
             }
         }
-        System.out.println("Абонент с номером " + name + " не существует.\n");
+        System.out.println("Абонент с именем " + name + " не существует.\n");
         return Long.MIN_VALUE;
     }
     public Set <PhoneBookList> printAllNames(){
-        return null;
+        return phoneBookSet;
     }
 }
