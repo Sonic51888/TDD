@@ -1,6 +1,7 @@
 package ru.netology;
 
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,7 +17,15 @@ public class PhoneBook {
     }
 
     public String findByNumber(long phoneNumber) {
-        return null;
+        Iterator<PhoneBookList> itr = phoneBookSet.iterator();
+        PhoneBookList phoneBookList;
+        while (itr.hasNext()) {
+            phoneBookList = itr.next();
+            if (phoneBookList.getPhoneNumber() == phoneNumber) {
+                return phoneBookList.getName();
+            }
+        }
+        return "Абонент с номером " + phoneNumber + " не существует.\n";
     }
 
 }
