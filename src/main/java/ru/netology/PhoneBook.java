@@ -29,7 +29,15 @@ public class PhoneBook {
     }
 
     public long findByName(String name) {
-
-        return 0;
+        Iterator<PhoneBookList> itr = phoneBookSet.iterator();
+        PhoneBookList phoneBookList;
+        while (itr.hasNext()) {
+            phoneBookList = itr.next();
+            if (phoneBookList.getName().equals(name)) {
+                return phoneBookList.getPhoneNumber();
+            }
+        }
+        System.out.println("Абонент с номером " + name + " не существует.\n");
+        return Long.MIN_VALUE;
     }
 }
